@@ -9,38 +9,48 @@ html {
 
 body {
   margin: 0;
+  cursor: default;
 }
 
 h1 {
   font-size: 3.5em;
+  cursor: default;
 }
 
 h2 {
   font-size: 2.7em;
+  cursor: default;
 }
 
 h3 {
   font-size: 1.8em;
+  cursor: default;
 }
 
 p {
   font-size: 1.25em;
+  cursor: default;
 }
 
 ul {
   list-style: none;
 }
 
+a {
+  cursor: pointer;
+}
+
 button {
   font-size: 1.5em;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 9px 16px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 9px;
   box-shadow: 2px 2px 7px rgba(10, 10, 10, 0.5);
   color: #ededed;
   /* color: #f0f8ff; */
-  background-color: #9a2be3;
+  background-color: #9a2be3fa;
+  cursor: pointer;
   transition: all 250ms ease-in-out;
 
   &:hover {
@@ -96,7 +106,7 @@ header {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  height: 97vh;
+  height: calc(100vh - 1px);
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
@@ -153,23 +163,29 @@ header {
     background-color: #232323fa;
     color: white;
     width: 80vw;
-    height: 60vh;
+    min-height: 62vh;
     z-index: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* justify-content: space-evenly; */
     justify-content: flex-start;
+    padding-block: auto;
 
     & i {
       position: absolute;
-      top: 24vh;
+      top: 20%;
       right: 15vw;
+      transform: translateY(27%);
+
+      cursor: pointer;
+      font-size: 24px;
     }
 
     & h3#title-detail {
       font-size: 2.6rem;
-      margin-top: 40px;
+      margin: 40px 10px 0;
+      text-wrap: wrap;
     }
 
     & p#text-detail {
@@ -182,7 +198,7 @@ header {
     }
 
     & button.info-detail {
-      margin-top: 10px;
+      margin: 5px auto 21px;
     }
   }
 }
@@ -303,7 +319,7 @@ header {
 
   & li {
     margin: 14px 0;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     font-weight: bold;
   }
 }
@@ -314,9 +330,18 @@ header {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  background-color: rgb(32, 32, 32);
+  /* background-color: rgb(32, 32, 32); */
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("media/ultimo-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   color: #ededed;
-  height: 100vh;
+  height: 90vh;
 
   & button {
     /* font-size: 1.79em; */
@@ -340,7 +365,7 @@ footer {
   }
 
   & .container {
-    height: 90px;
+    height: 79.7px;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -482,8 +507,9 @@ footer {
   }
 
   footer .container {
-    justify-content: flex-end;
-    margin-right: 30px;
+    /* justify-content: flex-end; */
+    justify-content: center;
+    margin-right: 20px;
   }
 }
 

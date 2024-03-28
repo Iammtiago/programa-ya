@@ -25,28 +25,30 @@ for (let index = 0; index < info.length; index++) {
     info[index].addEventListener('click', function (e) {
         e.preventDefault();
 
-        // document.body.style.filter = "blur(3px)"
+        if (window.innerWidth >= 729) {
+            // window.location.href = ancla[index].href
+            window.open(ancla[index].href, "_blank")
+        } else {
 
-        const detail = document.querySelector('.details');
-
-
-        title.innerHTML = h3[index].innerHTML;
-        paragraph.innerHTML = p[index].innerHTML
-        a.href = ancla[index].href
-
-        // console.log(e);
-        // console.log(h3[index].innerHTML);
-        // console.log(ancla[index].href);
-        
-        details.classList.remove("hidden");
-
-        // detail.appendChild(i);
-        detail.appendChild(title);
-        detail.appendChild(paragraph);
-        a.appendChild(button)
-        detail.appendChild(a)
+            const detail = document.querySelector('.details');
 
 
+            title.innerHTML = h3[index].innerHTML;
+            paragraph.innerHTML = p[index].innerHTML
+            a.href = ancla[index].href
+
+            // console.log(e);
+            // console.log(h3[index].innerHTML);
+            // console.log(ancla[index].href);
+
+            details.classList.remove("hidden");
+
+            // detail.appendChild(i);
+            detail.appendChild(title);
+            detail.appendChild(paragraph);
+            a.appendChild(button)
+            detail.appendChild(a)
+        }
 
     });
 }
